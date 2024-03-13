@@ -1,0 +1,14 @@
+<script>
+function copyText() {
+var cT = '';
+if (window.getSelection) {
+cT = window.getSelection().toString();} 
+else if (document.selection && document.selection.type != 'Control') {
+cT = document.selection.createRange().text;}
+return cT;}
+document.addEventListener("copy", function(e){
+dataLayer.push({
+'event': 'textCopied',
+'clipboardText': copyText(),
+'clipboardLength': copyText().length});});
+</script>
