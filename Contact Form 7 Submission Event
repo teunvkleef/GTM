@@ -1,0 +1,9 @@
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+ window.dataLayer.push({
+ "event" : "formsubmission",
+ "formId" : event.detail.contactFormId,
+ "form_info" : event.detail.inputs
+ })
+}); 
+</script>
